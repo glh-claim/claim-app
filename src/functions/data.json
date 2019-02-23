@@ -6,7 +6,7 @@
         "Paid without getting confirmation / ticket",
         "Booking confirmation did not match the order specification",
         "Defective ticket / overbooking"
-        "Payment: charged more than the ticket price"
+        "Payment: Charge more than the contract amount"
       ]
     },
     "electronicAndAppliances": {
@@ -59,7 +59,24 @@
     }
     }],
 
-
+    "lawServices": [{
+      "bookingNotMatch": {
+        "displayName": "Booking confirmation did not match the order specification",
+        "sectionExtract": "Since my client has already paid in full, my client is entitled to demand a full refund for the service which is not delivered. Under Section 5 of the Supply of Services (Implied Terms) Ordinance of Hong Kong, in a contract for the supply of a service where the supplier is acting in the course of a business, there is an implied term that the supplier will carry out the service with reasonable care and skill."
+      },
+      "defectiveTix": {
+        "displayName": "Defective ticket / overbooking",
+        "sectionExtract": "Since my client has already paid in full, my client is entitled to demand a full refund for the service which is not delivered. Under Section 5 of the Supply of Services (Implied Terms) Ordinance of Hong Kong, in a contract for the supply of a service where the supplier is acting in the course of a business, there is an implied term that the supplier will carry out the service with reasonable care and skill. Under sections 2 and 9 of the Theft Ordinance of Hong Kong, if the seller never had the intention to supply the service or had known that there would not be an available service to provide, the seller may have committed the offence of theft. The sum of money paid by the buyer is considered property stolen by the seller, if the seller did not supply the service."
+      },
+      "paidTooMuch": {
+        "displayName": "Payment: Charge more than the contract amount",
+        "sectionExtract": "Since my client has paid in excess of the contractual sum, my client is entitled to demand a full refund of the excess sum. Under sections 2 and 9 of the Theft Ordinance of Hong Kong, if the seller had intentionally taken more money than as agreed under the contract, or had done so negligently but refused to return such sum after having known the circumstances, the seller may have committed the offence of theft. The sum of money paid by the buyer is considered property stolen by the seller."
+      },
+      "badReturn": {
+        "displayName": "Unreasonable return / maintenance policy",
+        "sectionExtract": "Under Section 5 and 6 of the Unconscionable Contracts Ordinance, the contract may become unenforceable if, as a result of conduct engaged in by the other party, the consumer was required to comply with conditions that were not reasonably necessary for the protection of the legitimate interests of the other party."
+      }
+      }],
 
     "lawGoods": [{
       "faulty": {
