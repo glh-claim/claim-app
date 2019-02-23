@@ -19,6 +19,7 @@ import SpecificAirlineScreen from './src/SpecificAirlineScreen.js';
 import EvidenceScreen from './src/EvidenceScreen.js';
 import SummaryScreen from './src/SummaryScreen.js';
 import ReviewScreen from './src/ReviewScreen.js';
+import SectionScreen from './src/SectionScreen.js';
 
 global.globalTitle = "";
 global.globalIcon = "";
@@ -55,6 +56,9 @@ const RootStack = createStackNavigator({
   	},
 	review: {
       screen: ReviewScreen
+  	},
+	section: {
+      screen: SectionScreen
   	},
   });
 
