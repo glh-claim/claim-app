@@ -38,6 +38,6 @@ module.exports = {
           "\n\n(3)This email is sent through the CLAIMate server.  By replying directly to this email, you agree and fully understand that your response may be published in part or in whole on our public platform www.claimate.com.hk.  If you desire to pursue private correspondence with [NAME] you may do so through his/her email correspondence: "+ data.email +"or telephone: "+ data.phone_number +
           "\n\n(4)Please be aware that upon the expiry of a TWO-week period from the date of submission of this letter of demand, the users of our platform, in this case, "+ data.customername +" have the option to publish this demand letter and its contents in any form.";
 
-  console.log(text);
+  return text;
   }
 }
