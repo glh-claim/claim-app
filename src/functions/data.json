@@ -1,0 +1,98 @@
+{
+  "categories": [{
+    "airlines": {
+      "displayName": "Airlines",
+      "services": [
+        "Paid without getting confirmation / ticket",
+        "Booking confirmation did not match the order specification",
+        "Defective ticket / overbooking"
+        "Payment: charged more than the ticket price"
+      ]
+    },
+    "electronicAndAppliances": {
+      "displayName": "Electronic and Appliances",
+      "services": [
+        "Unreasonable return / maintenance policy"
+      ],
+      "goods": [
+        "Faulty / Defective / Broken products",
+        "Counterfeit Products",
+        "Not of satisfactory quality",
+        "Incorrect quantities",
+        "Product does not match physical description",
+        "Missing acessories",
+        "No delivery at all"
+      ]
+    },
+    "foodAndBeverages": {
+      "displayName": "Food and Beverages",
+      "goods": [
+        "Perished upon delivery",
+        "Passed the expiry date upon delivery",
+        "Incorrect quantities",
+        "Product does not match physical description",
+        "No delivery at all"
+      ]
+    },
+    "apparels": {
+      "displayName": "Apparels",
+      "services": "Unreasonable return / maintenance policy",
+      "goods": [
+        "Faulty / Defective / Broken products",
+        "Not of satisfactory quality",
+        "Incorrect quantities",
+        "Product does not match physical description",
+        "No delivery at all"
+      ]
+    },
+    "cosmetics": {
+      "displayName": "Cosmetics,
+      ",
+      "goods": [
+        "Faulty / Defective / Broken products",
+        "Perished upon delivery",
+        "Passed the expiry date upon delivery",
+        "Incorrect quantities",
+        "Product does not match physical description",
+        "No delivery at all"
+      ]
+    }
+    }],
+
+
+
+    "lawGoods": [{
+      "faulty": {
+        "displayName": "Faulty / Perished / Broken / Not working when delivered",
+        "sectionExtract": "Under Section 16 of the Sales of Goods Ordinance of Hong Kong, where the seller sells goods in the course of a business, there is an implied condition that the goods supplied under the contract are of merchantable quality. Under Section 15(1) of the Sales of Goods Ordinance of Hong Kong, where there is a contract for the sale of goods by description, there is an implied condition that the goods shall correspond with the description."
+      },
+      "notSatisfied": {
+        "displayName": "Not of satisfactory quality",
+        "sectionExtract": "Under Section 16 of the Sales of Goods Ordinance of Hong Kong, where the seller sells goods in the course of a business, there is an implied condition that the goods supplied under the contract are of merchantable quality. Under Section 15(1) of the Sales of Goods Ordinance of Hong Kong, where there is a contract for the sale of goods by description, there is an implied condition that the goods shall correspond with the description."
+      },
+      "noDelivery": {
+        "displayName": "No delivery at all",
+        "sectionExtract": "Since my client has already paid, my client is entitled to demand a full refund or immediate delivery of goods as stipulated under the contract. Under sections 2 and 9 of the Theft Ordinance of Hong Kong, if the seller never had the intention to supply the advertised goods or, having received money from the purchaser decides not to supply the goods, the seller may have committed the offence of theft. The sum of money paid by the buyer is considered property stolen by the seller, if the seller did not supply the goods."
+      },
+      "paidWithoutConfirmation": {
+        "displayName": "Paid without getting confirmation / ticket",
+        "sectionExtract": "Since my client has already paid, my client is entitled to demand a full refund or immediate delivery of goods as stipulated under the contract. Under sections 2 and 9 of the Theft Ordinance of Hong Kong, if the seller never had the intention to supply the advertised goods or, having received money from the purchaser decides not to supply the goods, the seller may have committed the offence of theft. The sum of money paid by the buyer is considered property stolen by the seller, if the seller did not supply the goods."
+      },
+      "notDescription": {
+        "displayName": "Product does not match description",
+        "sectionExtract": "Under Section 15(1) of the Sales of Goods Ordinance of Hong Kong, where there is a contract for the sale of goods by description, there is an implied condition that the goods shall correspond with the description."
+      },
+      "counterfeit": {
+        "displayName": "Counterfeit products",
+        "sectionExtract": "Under Section 7(1)(a)(ii) of the Trade Descriptions Ordinance of Hong Kong, it is an offence to supply or offer to supply any goods to which a false trade description is applied. It includes goods that imitate another product but were not made by the manufacturer of the product as originally described in your website."
+      },
+      "incorrectQuantities": {
+        "displayName": "Incorrect quantities",
+        "sectionExtract": "Under Section 32(1) of the Sales of Goods Ordinance of Hong Kong, where the seller delivers to the buyer a quantity of goods less than he contracted to sell, the buyer may reject them. My client is entitled to a full refund or an immediate delivery of the correct quantities."
+      },
+      "missingAccessories": {
+        "displayName": "missingAccessories",
+        "sectionExtract": "Under Section 32(1) of the Sales of Goods Ordinance of Hong Kong, where the seller delivers to the buyer a quantity of goods less than he contracted to sell, the buyer may reject them. My client is entitled to a full refund or an immediate delivery of the correct quantities."
+      }
+      }]
+}
