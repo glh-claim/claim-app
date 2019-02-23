@@ -7,6 +7,7 @@ import {
 	FlatList,
 	Dimensions,
 } from 'react-native';
+import { Icon } from 'native-base';
 import { StackActions, NavigationActions } from 'react-navigation';
 const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
@@ -22,20 +23,32 @@ export default class BrowseScreen extends Component
 		super();
 		this.state = {
 	        data: [
-				{name: 'test', icon: 'test2'},
-				{name: 'test', icon: 'test2'},
-				{name: 'test', icon: 'test2'},
-				{name: 'test', icon: 'test2'},
-				{name: 'test', icon: 'test2'},
+				{name: 'Airline', icon: 'plane', type: 'FontAwesome'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
+				{name: 'placeholder', icon: 'question', type: 'AntDesign'},
 			],
 	    };
 	}
 
 	renderItem = ({item, index}) => {
 		return (
-			<View style = {{width: windowWidth/3, borderWidth: 2, height: windowWidth/3}}>
-				<Text>{item.name}</Text>
-			</View>
+			<TouchableOpacity style = {{flex: 1, margin: 10, height: windowWidth/3}} activeOpacity={0.5} onPress={() => Alert.alert("Pressed " + item.name + " with index " + index.toString())}>
+				<View style = {{borderWidth: 0, width: (windowWidth-60)/3, height: (windowWidth-60)/3, borderRadius: 100, justifyContent: 'center', alignItems: 'center', borderColor: 'lightgray'}}>
+					<Icon name={item.icon} type={item.type} style={{ fontSize: 75, color: "white" }} />
+				</View>
+				<View style = {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+					<Text style = {{fontFamily: 'Avenir Next', color: 'white'}}>{item.name}</Text>
+				</View>
+			</TouchableOpacity>
 		);
 	};
 
@@ -49,6 +62,7 @@ export default class BrowseScreen extends Component
 				<View>
 					<FlatList
 						data={this.state.data}
+						style = {{width: windowWidth, height: windowHeight-100}}
 						renderItem={this.renderItem}
 						numColumns={3}
 						keyExtractor={(item, index) => index.toString()}
