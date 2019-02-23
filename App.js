@@ -14,6 +14,12 @@ import LoginScreen from './src/LoginScreen.js';
 import PickScreen from './src/PickScreen.js';
 import BrowseScreen from './src/BrowseScreen.js';
 import ClaimScreen from './src/ClaimScreen.js';
+import AirlineScreen from './src/AirlineScreen.js';
+import SpecificAirlineScreen from './src/SpecificAirlineScreen.js';
+
+global.globalTitle = "";
+global.globalIcon = "";
+global.globalType = "";
 
 const RootStack = createStackNavigator({
     login: {
@@ -27,6 +33,12 @@ const RootStack = createStackNavigator({
   	},
 	claim: {
       screen: ClaimScreen
+  	},
+	airline: {
+      screen: AirlineScreen
+  	},
+	specificAirline: {
+      screen: SpecificAirlineScreen
   	},
   });
 
