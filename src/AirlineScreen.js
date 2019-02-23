@@ -6,7 +6,7 @@ import {
     Alert,
 	FlatList,
 	Dimensions,
-	SafeAreaView
+	SafeAreaView,
 } from 'react-native';
 import { Icon } from 'native-base';
 import { StackActions, NavigationActions } from 'react-navigation';
@@ -24,11 +24,11 @@ export default class AirlineScreen extends Component
 		super();
 		this.state = {
 	        data: [
-				{title: 'Airline 1', subtitle: 'Lorem Ipsum Dolor Sit Amet', icon: 'plane', type: 'FontAwesome'},
-				{title: 'Airline 2', subtitle: 'Lorem Ipsum Dolor Sit Amet', icon: 'paper-plane', type: 'Entypo'},
-				{title: 'Airline 3', subtitle: 'Lorem Ipsum Dolor Sit Amet', icon: 'paper-plane-o', type: 'FontAwesome'},
-				{title: 'Airline 4', subtitle: 'Lorem Ipsum Dolor Sit Amet', icon: 'ios-paper-plane', type: 'Ionicons'},
-				{title: 'Airline 5', subtitle: 'Lorem Ipsum Dolor Sit Amet', icon: 'airplane', type: 'MaterialCommunityIcons'},
+				{title: 'Cathay Pacific', subtitle: 'Total Number of Cases: 18\nSecond line very pretty', icon: 'plane', type: 'FontAwesome', image: require("./images/cathay.png")},
+				{title: 'HK Express', subtitle: 'Lorem Ipsum Dolor Sit Amet', icon: 'paper-plane', type: 'Entypo', image: require("./images/hkexpress.jpg")},
+				{title: 'China Airlines', subtitle: 'Lorem Ipsum Dolor Sit Amet', icon: 'paper-plane-o', type: 'FontAwesome', image: require("./images/chinaairlines.jpg")},
+				{title: 'Ryanair', subtitle: 'Lorem Ipsum Dolor Sit Amet', icon: 'ios-paper-plane', type: 'Ionicons', image: require("./images/ryanair.png")},
+				{title: 'Emirates', subtitle: 'Lorem Ipsum Dolor Sit Amet', icon: 'airplane', type: 'MaterialCommunityIcons', image: require("./images/emirates.png")},
 			]
 	    };
 	}
@@ -42,13 +42,16 @@ export default class AirlineScreen extends Component
 
 	renderItem = ({item, index}) => {
 		return (
-			<TouchableOpacity style = {{flex: 1, flexDirection: 'row'}} activeOpacity={0.5} onPress={() => this.airlineClicked(item.title, item.icon, item.type, index)}>
+			<TouchableOpacity style = {{flex: 1, flexDirection: 'row', backgroundColor: 'white', marginVertical: 5, borderRadius: 20, marginHorizontal: 10}} activeOpacity={0.5} onPress={() => this.airlineClicked(item.title, item.image, item.type, index)}>
 				<View style = {{borderWidth: 0, width: (windowWidth-60)/3, height: (windowWidth-60)/3, borderRadius: 100, justifyContent: 'center', alignItems: 'center', borderColor: 'lightgray'}}>
-					<Icon name={item.icon} type={item.type} style={{ fontSize: 60, color: "white" }} />
+					<Image
+					style={{width: 75, height: 75, borderRadius: 20, borderWidth: 1, borderColor: "lightgray"}}
+					source={item.image}
+					/>
 				</View>
 				<View style = {{flex: 1, justifyContent: 'center'}}>
-					<Text style = {{fontFamily: 'Avenir Next', color: 'white', fontWeight: '500', fontSize: 14}}>{item.title}</Text>
-					<Text style = {{fontFamily: 'Avenir Next', color: 'lightgray', fontWeight: '400', fontSize: 12}}>{item.subtitle}</Text>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', fontWeight: '500', fontSize: 14}}>{item.title}</Text>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#687195', fontWeight: '400', fontSize: 12}}>{item.subtitle}</Text>
 				</View>
 			</TouchableOpacity>
 		);
@@ -59,20 +62,22 @@ export default class AirlineScreen extends Component
 		return(
 			<SafeAreaView style = {styles.container}>
 				<View style = {{justifyContent: 'center', alignItems: 'center', marginTop: 30}}>
-                	<Text style = {{fontFamily: 'Avenir Next', color: 'white', fontSize: 24, fontWeight: '500'}}>AIRLINES</Text>
+                	<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', fontSize: 24, fontWeight: '500', marginBottom: 10}}>AIRLINES</Text>
 				</View>
 				<View>
 					<FlatList
 						data={this.state.data}
-						style = {{width: windowWidth, height: windowHeight-150}}
+						style = {{width: windowWidth, height: windowHeight-180}}
 						renderItem={this.renderItem}
 						numColumns={1}
 						keyExtractor={(item, index) => index.toString()}
 					/>
 				</View>
-				<TouchableOpacity style = {{height: 50, backgroundColor: 'lightgray', marginBottom: 20, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("browse")}>
-					<Text>Go Back</Text>
-				</TouchableOpacity>
+				<View style = {{justifyContent: 'flex-end', flex: 1}}>
+					<TouchableOpacity style = {{height: 50, backgroundColor: 'white', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.goBack()}>
+						<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', textAlign: 'center', fontSize: 16}}>Go Back</Text>
+					</TouchableOpacity>
+				</View>
 			</SafeAreaView>
 		);
 	}
@@ -81,6 +86,6 @@ export default class AirlineScreen extends Component
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#2c2c2c',
+		backgroundColor: '#ebecf0',
 	},
 });

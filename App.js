@@ -18,6 +18,7 @@ import AirlineScreen from './src/AirlineScreen.js';
 import SpecificAirlineScreen from './src/SpecificAirlineScreen.js';
 import EvidenceScreen from './src/EvidenceScreen.js';
 import SummaryScreen from './src/SummaryScreen.js';
+import ReviewScreen from './src/ReviewScreen.js';
 
 global.globalTitle = "";
 global.globalIcon = "";
@@ -47,6 +48,9 @@ const RootStack = createStackNavigator({
   	},
 	summary: {
       screen: SummaryScreen
+  	},
+	review: {
+      screen: ReviewScreen
   	},
   });
 

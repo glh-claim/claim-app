@@ -36,7 +36,7 @@ export default class LoginScreen extends Component
 	componentDidMount() {
 		// this.props.navigation.navigate("pick");
 		// this.props.navigation.navigate("airline");
-		this.props.navigation.navigate("claim");
+		// this.props.navigation.navigate("claim");
 	}
 
 	updateUserText(text) {
@@ -62,8 +62,7 @@ export default class LoginScreen extends Component
 	render()
 	{
 		return(
-			<SafeAreaView style = {[styles.container, {backgroundColor: '#2c2c2c',}]}>
-			<StatusBar barStyle="light-content" />
+			<SafeAreaView style = {[styles.container, {backgroundColor: '#ebecf0',}]}>
 				<KeyboardAvoidingView behavior='padding' style={styles.container} enabled>
 				<TouchableWithoutFeedback style={styles.container} onPress={Keyboard.dismiss}>
 					<View style={{flex: 1, justifyContent: 'flex-end'}}>
@@ -90,7 +89,7 @@ export default class LoginScreen extends Component
 						placeholderTextColor='#7f8c8d'
 						/>
 
-						<TouchableOpacity style={[styles.button, {marginBottom: 15, backgroundColor: this.state.usernameValue.length >= 6 && this.state.passwordValue.length >= 6 ? '#ecf0f1' : '#7f8c8d'}]} onPress={ () => this.signinClicked(this.state.usernameValue, this.state.passwordValue) }>
+						<TouchableOpacity style={[styles.button, {marginBottom: 15, backgroundColor: "#ffffff"}]} onPress={ () => this.signinClicked(this.state.usernameValue, this.state.passwordValue) }>
 							<Text style={styles.buttonText}>
 								SIGN IN
 							</Text>
@@ -104,13 +103,13 @@ export default class LoginScreen extends Component
 				<TouchableOpacity
 				style = {{width: 200, justifyContent: 'center', alignSelf: 'center'}}
 				onPress={ () => Alert.alert("Forgot Password? Clicked") }>
-					<Text style = {{fontSize: 12, justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginTop: -5, color: '#fff', fontFamily: 'Avenir Next'}}>
+					<Text style = {{fontSize: 12, justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginTop: -5, color: '#001a5a', fontFamily: 'Avenir Next'}}>
 						Forgot Password?
 					</Text>
 				</TouchableOpacity>
 
 				<View>
-					<Text style = {{fontSize: 16, justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginTop: 15, color: '#fff', fontFamily: 'Avenir Next'}}>
+					<Text style = {{fontSize: 16, justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginTop: 15, color: '#001a5a', fontFamily: 'Avenir Next'}}>
 						Or,
 					</Text>
 				</View>
@@ -118,7 +117,7 @@ export default class LoginScreen extends Component
 					{/*
 						Navigates to Phone Verification for initial step of account creation
 					*/}
-					<TouchableOpacity style={[styles.button, {backgroundColor: '#ecf0f1', marginBottom: 25}]} onPress={ () => Alert.alert("Create An Account Clicked") }>
+					<TouchableOpacity style={[styles.button, {backgroundColor: '#ffffff', marginBottom: 25}]} onPress={ () => Alert.alert("Create An Account Clicked") }>
 						<Text style={styles.buttonText}>
 							CREATE AN ACCOUNT
 						</Text>
@@ -144,11 +143,11 @@ const styles = StyleSheet.create({
 	},
 	input: {
         height: 40,
-        color: '#fff',
+        color: '#00355f',
         marginBottom: 10,
         marginHorizontal: 20,
         borderBottomWidth: 2,
-        borderColor: '#bdc3c7',
+        borderColor: '#c8cbd8',
         fontSize: 16,
     },
 	button: {
@@ -161,7 +160,7 @@ const styles = StyleSheet.create({
     },
 	buttonText: {
         textAlign: 'center',
-        color: 'black',
+        color: '#001a5a',
         fontWeight: '500',
         fontSize: 18,
 		fontFamily: 'Avenir Next',
