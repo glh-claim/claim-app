@@ -23,6 +23,10 @@ import ReviewScreen from './src/ReviewScreen.js';
 global.globalTitle = "";
 global.globalIcon = "";
 global.globalType = "";
+global.globalResponseRate = 0;
+global.globalSettledCases = 0;
+global.globalCases = 0;
+global.globalResponseTime = 0;
 
 const RootStack = createStackNavigator({
     login: {

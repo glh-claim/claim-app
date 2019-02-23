@@ -35,11 +35,11 @@ export default class SummaryScreen extends Component
 	renderButton() {
 		return(
 			<View style = {{justifyContent: 'flex-end'}}>
-				<TouchableOpacity style = {{height: 50, backgroundColor: 'lightgray', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => Alert.alert("Ok")}>
-					<Text>Submit</Text>
+				<TouchableOpacity style = {{height: 50, backgroundColor: 'white', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("summary")}>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', textAlign: 'center', fontSize: 16}}>Submit</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style = {{height: 50, backgroundColor: 'lightgray', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.goBack()}>
-					<Text>Go Back</Text>
+				<TouchableOpacity style = {{height: 50, backgroundColor: 'white', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.goBack()}>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', textAlign: 'center', fontSize: 16}}>Go Back</Text>
 				</TouchableOpacity>
 			</View>
 		);
@@ -49,20 +49,20 @@ export default class SummaryScreen extends Component
 	{
 		return(
 			<SafeAreaView style = {styles.container}>
-				<View style = {{justifyContent: 'center', alignItems: 'center', marginTop: 30}}>
-					<Text style = {{fontFamily: 'Avenir Next', color: 'white', fontSize: 24, fontWeight: '500'}}>Your Claim Letter</Text>
+				<View style = {{justifyContent: 'center', alignItems: 'center', marginTop: 25}}>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', fontSize: 24, fontWeight: '500'}}>Your Claim Letter</Text>
 				</View>
-				<ScrollView style ={{margin: 20, flex: 1, backgroundColor: 'lightgray', borderRadius: 10, padding: 10}}>
+				<ScrollView style ={{margin: 20, flex: 1, backgroundColor: 'white', borderRadius: 10, padding: 10, marginTop: 10}}>
 					<Text style = {{fontFamily: 'Avenir Next', fontSize: 12}}>{dummyText}</Text>
 				</ScrollView>
 				<View style = {{marginBottom: 20, marginHorizontal: 20,}}>
-					<Text style = {{fontFamily: 'Avenir Next', color: 'white', fontSize: 14, fontWeight: '500'}}>Your Attachments</Text>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', fontSize: 14, fontWeight: '500'}}>Your Attachments</Text>
 					<View style = {{flexDirection: 'row'}}>
-						<View style = {{width: 120, height: 30, backgroundColor: 'gray', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}}>
-							<Text style = {{color: 'white', fontFamily: 'Avenir Next'}}>ticket.pdf</Text>
+						<View style = {{width: 120, height: 30, backgroundColor: 'white', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}}>
+							<Text style = {{color: '#00355f', fontFamily: 'Avenir Next'}}>ticket.pdf</Text>
 						</View>
-						<View style = {{width: 120, height: 30, backgroundColor: 'gray', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}}>
-							<Text style = {{color: 'white', fontFamily: 'Avenir Next'}}>screenshot.jpg</Text>
+						<View style = {{width: 120, height: 30, backgroundColor: 'white', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}}>
+							<Text style = {{color: '#00355f', fontFamily: 'Avenir Next'}}>screenshot.jpg</Text>
 						</View>
 					</View>
 				</View>
@@ -75,6 +75,6 @@ export default class SummaryScreen extends Component
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#2c2c2c',
+		backgroundColor: '#ebecf0',
 	},
 });

@@ -24,20 +24,31 @@ export default class EvidenceScreen extends Component
 				{ value: 'Receipt' },
 				{ value: 'Ticket' },
 				{ value: 'Identification' }
-			]
+			],
+			type: "",
 		};
+	}
+
+	typeChanged(text) {
+		this.setState({
+			type: text,
+		});
 	}
 
 	renderItems() {
 		return(
-			<View style = {{flex: 1, paddingHorizontal: 50, backgroundColor: 'lightgray', marginVertical: 25}}>
-				<Dropdown
+			<View style = {{flex: 1}}>
+				<View style = {{marginHorizontal: 40, marginBottom: 10}}>
+					<Dropdown
 					baseColor={"gray"}
 					label='Type of Document'
-					data={this.state.data}/>
-					<TouchableOpacity style = {{height: 50, backgroundColor: 'gray', marginBottom: 15, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("summary")}>
-						<Text style = {{color: 'white', fontFamily: 'Avenir Next', fontWeight: '500'}}>Upload</Text>
-					</TouchableOpacity>
+					data={this.state.data}
+					onChangeText={(text) => this.typeChanged(text)}/>
+				</View>
+
+				<TouchableOpacity style = {{height: 50, backgroundColor: (this.state.type && this.state.type.length > 1 ? 'white' : 'lightgray'), marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={(this.state.type && this.state.type.length > 1 ? () => Alert.alert("Upload Pressed") : () => Alert.alert("Please pick a document type"))}>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', textAlign: 'center', fontSize: 16}}>Upload</Text>
+				</TouchableOpacity>
 			</View>
 		);
 	}
@@ -45,11 +56,11 @@ export default class EvidenceScreen extends Component
 	renderButton() {
 		return(
 			<View style = {{justifyContent: 'flex-end'}}>
-				<TouchableOpacity style = {{height: 50, backgroundColor: 'lightgray', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("summary")}>
-					<Text>Prepare Claim</Text>
+				<TouchableOpacity style = {{height: 50, backgroundColor: 'white', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("summary")}>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', textAlign: 'center', fontSize: 16}}>Prepare Claim</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style = {{height: 50, backgroundColor: 'lightgray', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.goBack()}>
-					<Text>Go Back</Text>
+				<TouchableOpacity style = {{height: 50, backgroundColor: 'white', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.goBack()}>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', textAlign: 'center', fontSize: 16}}>Go Back</Text>
 				</TouchableOpacity>
 			</View>
 		);
@@ -59,11 +70,11 @@ export default class EvidenceScreen extends Component
 	{
 		return(
 			<SafeAreaView style = {styles.container}>
-				<View style = {{justifyContent: 'center', alignItems: 'center', marginTop: 30}}>
-					<Text style = {{fontFamily: 'Avenir Next', color: 'white', fontSize: 24, fontWeight: '500'}}>
+				<View style = {{justifyContent: 'center', alignItems: 'center', marginTop: 25}}>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', fontSize: 24, fontWeight: '500'}}>
 						Upload Evidence
 					</Text>
-					<Text style = {{fontFamily: 'Avenir Next', color: 'lightgray', fontSize: 14, fontWeight: '500', textAlign: 'center', paddingHorizontal: 50}}>
+					<Text style = {{fontFamily: 'Avenir Next', color: '#33447a', fontSize: 14, fontWeight: '500', textAlign: 'center', paddingHorizontal: 50}}>
 						Upload relevant documents or photos to support your claim
 					</Text>
 				</View>
@@ -77,6 +88,6 @@ export default class EvidenceScreen extends Component
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#2c2c2c',
+		backgroundColor: '#ebecf0',
 	},
 });

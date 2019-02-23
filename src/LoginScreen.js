@@ -34,7 +34,7 @@ export default class LoginScreen extends Component
 
 	// TODO: REMOVE THIS
 	componentDidMount() {
-		// this.props.navigation.navigate("pick");
+		this.props.navigation.navigate("pick");
 		// this.props.navigation.navigate("airline");
 		// this.props.navigation.navigate("claim");
 	}

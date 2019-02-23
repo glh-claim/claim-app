@@ -47,7 +47,7 @@ export default class SpecificAirlineScreen extends Component
 	renderHeader() {
 		return(
 			<View>
-				<View style = {{height: windowWidth/3+85, flexDirection: 'column', backgroundColor: 'white', borderRadius: 20, marginHorizontal: 20, marginVertical: 10, paddingTop: 20}}>
+				<View style = {{height: windowWidth/3+100, flexDirection: 'column', backgroundColor: 'white', borderRadius: 20, marginHorizontal: 20, marginVertical: 10, paddingTop: 20}}>
 					<View style = {{justifyContent: 'flex-start', alignItems: 'flex-start', marginLeft: 20, flexDirection: 'row'}}>
 						<Image
 						style={{width: 75, height: 75, borderRadius: 20, borderWidth: 1, borderColor: "lightgray"}}
@@ -60,44 +60,57 @@ export default class SpecificAirlineScreen extends Component
 
 					<View style = {{marginTop: 15}}>
 						<View style = {{flexDirection: 'row'}}>
+
 							<View style = {styles.circleAndText}>
 								<View style = {styles.circle}>
 									<Text style = {styles.circleText}>
-										61%
+										{globalCases}
 									</Text>
 								</View>
 
 								<Text style = {styles.circleTextBelow}>
-									Response Rate
+									Total{"\n"}Cases
 								</Text>
 							</View>
 
 							<View style = {styles.circleAndText}>
 								<View style = {styles.circle}>
 									<Text style = {styles.circleText}>
-										30%
+										{globalResponseTime} Days
 									</Text>
 								</View>
 
 								<Text style = {styles.circleTextBelow}>
-									Settled Cases
+									Avg. Response Time
 								</Text>
 							</View>
 
 							<View style = {styles.circleAndText}>
 								<View style = {styles.circle}>
 									<Text style = {styles.circleText}>
-										{this.state.data.length}
+										{globalResponseRate}%
 									</Text>
 								</View>
 
 								<Text style = {styles.circleTextBelow}>
-									Cases
+									Response{"\n"}Rate
 								</Text>
 							</View>
+
+							<View style = {styles.circleAndText}>
+								<View style = {styles.circle}>
+									<Text style = {styles.circleText}>
+										{globalSettledCases}%
+									</Text>
+								</View>
+
+								<Text style = {styles.circleTextBelow}>
+									Settled{"\n"}Cases
+								</Text>
+							</View>
+
 						</View>
 					</View>
-
 				</View>
 			</View>
 		);
@@ -105,7 +118,7 @@ export default class SpecificAirlineScreen extends Component
 
 	renderInfo() {
 		return(
-			<View style = {{flex: 1, flexDirection: 'column', marginVertical: 10, marginHorizontal: 20}}>
+			<View style = {{flex: 1, flexDirection: 'column', marginBottom: 10, marginHorizontal: 20}}>
 				<FlatList
 					data={this.state.data}
 					style = {{width: windowWidth-40, height: windowHeight-160}}
@@ -126,17 +139,20 @@ export default class SpecificAirlineScreen extends Component
 						<Text style = {{color: '#00355f', fontFamily: 'Avenir Next', fontSize: 13}}>Date: {item.date}</Text>
 						<Text style = {{color: '#00355f', fontFamily: 'Avenir Next', fontSize: 13}}>Status: {item.status}</Text>
 					</View>
-					<View style = {{flex: 1, flexDirection: 'column'}}>
-						<View style = {{flex: 1}}>
+					<View style = {{flex: 1, flexDirection: 'column', justifyContent: 'space-between'}}>
+						<View>
 							<Text style = {{color: '#00355f', fontFamily: 'Avenir Next', fontSize: 13}}>Nature: {item.nature}</Text>
 						</View>
-						<View style = {{flex: 2, justifyContent: 'center'}}>
-							<View style = {{flexDirection: 'row', opacity: 0.75}}>
-								<View style = {{width: item.approval, height: 20, borderTopLeftRadius: 100, borderBottomLeftRadius: 100, backgroundColor: 'green'}}>
+						<View>
+							<View style = {{flexDirection: 'row'}}>
+								<View style = {{width: item.approval, height: 15, borderTopLeftRadius: 100, borderBottomLeftRadius: 100, backgroundColor: '#00b894'}}>
 								</View>
-								<View style = {{width: 150 - item.approval, height: 20, borderTopRightRadius: 100, borderBottomRightRadius: 100, backgroundColor: 'red'}}>
+								<View style = {{width: 150 - item.approval, height: 15, borderTopRightRadius: 100, borderBottomRightRadius: 100, backgroundColor: '#ff7675'}}>
 								</View>
 							</View>
+						</View>
+						<View>
+							<Text style = {{color: '#00355f', fontFamily: 'Avenir Next', fontSize: 13}}>Approval: {Math.floor((item.approval*100)/150)}%</Text>
 						</View>
 					</View>
 				</View>
@@ -193,9 +209,9 @@ const styles = StyleSheet.create({
 		fontFamily: 'Avenir Next',
 		color: '#00355f',
 		fontWeight: '400',
-		fontSize: 11,
+		fontSize: 12,
 		textAlign: 'center',
-		paddingHorizontal: 10,
+		paddingHorizontal: 0,
 		marginTop: 10,
 	},
 	infoBox: {
@@ -217,5 +233,9 @@ const styles = StyleSheet.create({
 		fontWeight: '400',
 		fontSize: 16,
 	},
-	circleAndText: {width: (windowWidth-40)/3, justifyContent: 'center', alignItems: 'center'},
+	circleAndText: {
+		width: (windowWidth-40)/4,
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
 });
