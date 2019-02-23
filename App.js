@@ -17,6 +17,7 @@ import ClaimScreen from './src/ClaimScreen.js';
 import AirlineScreen from './src/AirlineScreen.js';
 import SpecificAirlineScreen from './src/SpecificAirlineScreen.js';
 import EvidenceScreen from './src/EvidenceScreen.js';
+import SummaryScreen from './src/SummaryScreen.js';
 
 global.globalTitle = "";
 global.globalIcon = "";
@@ -43,6 +44,9 @@ const RootStack = createStackNavigator({
   	},
 	evidence: {
       screen: EvidenceScreen
+  	},
+	summary: {
+      screen: SummaryScreen
   	},
   });
 

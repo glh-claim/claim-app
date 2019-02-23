@@ -43,6 +43,16 @@ export default class BrowseScreen extends Component
 		}
 	}
 
+	renderButton() {
+		return(
+			<View style = {{justifyContent: 'flex-end', flex: 1}}>
+				<TouchableOpacity style = {{height: 50, backgroundColor: 'lightgray', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.goBack()}>
+					<Text>Go Back</Text>
+				</TouchableOpacity>
+			</View>
+		);
+	}
+
 	renderItem = ({item, index}) => {
 		return (
 			<TouchableOpacity style = {{margin: 10, height: windowWidth/3}} activeOpacity={0.5} onPress={() => this.goToPage(item.name, index)}>
@@ -66,12 +76,13 @@ export default class BrowseScreen extends Component
 				<View>
 					<FlatList
 						data={this.state.data}
-						style = {{width: windowWidth, height: windowHeight-100}}
+						style = {{width: windowWidth, height: windowHeight-160}}
 						renderItem={this.renderItem}
 						numColumns={3}
 						keyExtractor={(item, index) => index.toString()}
 					/>
 				</View>
+				{this.renderButton()}
 			</View>
 		);
 	}

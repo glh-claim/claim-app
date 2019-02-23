@@ -35,7 +35,7 @@ export default class EvidenceScreen extends Component
 					baseColor={"gray"}
 					label='Type of Document'
 					data={this.state.data}/>
-					<TouchableOpacity style = {{height: 50, backgroundColor: 'gray', marginBottom: 15, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => Alert.alert("Upload button")}>
+					<TouchableOpacity style = {{height: 50, backgroundColor: 'gray', marginBottom: 15, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("summary")}>
 						<Text style = {{color: 'white', fontFamily: 'Avenir Next', fontWeight: '500'}}>Upload</Text>
 					</TouchableOpacity>
 			</View>
@@ -45,8 +45,8 @@ export default class EvidenceScreen extends Component
 	renderButton() {
 		return(
 			<View style = {{justifyContent: 'flex-end'}}>
-				<TouchableOpacity style = {{height: 50, backgroundColor: 'lightgray', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("evidence")}>
-					<Text>Continue</Text>
+				<TouchableOpacity style = {{height: 50, backgroundColor: 'lightgray', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("summary")}>
+					<Text>Prepare Claim</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style = {{height: 50, backgroundColor: 'lightgray', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.goBack()}>
 					<Text>Go Back</Text>

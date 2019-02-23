@@ -41,6 +41,14 @@ export default class PickScreen extends Component
 						<Text style = {{color: 'white'}}>Make a Claim</Text>
 					</TouchableOpacity>
 				</View>
+				<View style = {styles.half}>
+					<TouchableOpacity style = {styles.halfButton} onPress={() => this.props.navigation.navigate("claim")}>
+						<View style = {{height: 100, justifyContent: 'center', alignItems: 'center'}}>
+							<Icon name="rate-review" type="MaterialIcons" style={{ fontSize: 100, color: "white" }} />
+						</View>
+						<Text style = {{color: 'white'}}>Review</Text>
+					</TouchableOpacity>
+				</View>
 			</SafeAreaView>
 		);
 	}
@@ -50,7 +58,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#2c2c2c',
-		flexDirection: 'row',
+		flexDirection: 'column',
 	},
 	half: {
 		flex: 1,
