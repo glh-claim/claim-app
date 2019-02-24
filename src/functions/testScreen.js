@@ -1,17 +1,16 @@
 var output = require('./output.js');
 
 data = {
-  customerName: "Sean Chok", // text
+  customerName: "We the Team", // text
   phoneNumber: "+852 99999999", // text
   email: "email@gmail.com", // text
   companyName: "Bad Company", // text
-  category: "Electronic and Appliances", // dropdown - db.categories
-  itemType: "goods", // drop down services
+  category: "Electronic and Appliances", // dropdown
   description: "Looks so ugly compared to the photo", // text
-  grounds: "Not of satisfactory quality", // dropdown
+  grounds: "Booking confirmation did not match the order specification", // dropdown - based on category
   transactionDate: "24 Feb 2019", // text
   claimAmount: 3200, // number
-  wantApology: true,
+  wantApology: true, // boolean - dropdown
   customerLocation: "Hong Kong", // text
   companyLocation: "Hong Kong" // text
 }

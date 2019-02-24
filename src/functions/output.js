@@ -21,16 +21,13 @@ module.exports = {
         }
       }
     }
-    if (data.itemType === "goods") {
-      var foundLaw = findSectionExtract(db.lawGoods);
-    } else {
-      var foundLaw = findSectionExtract(db.lawServices);
-    }
+    var foundLaw = findSectionExtract(db.laws);
     data.grounds = foundLaw.displayName;
+    data.itemType = foundLaw.itemType;
     data.sectionExtract = foundLaw.sectionExtract;
-
+    
     // want apology
-    var apologyText = ""
+    data.apologyText = data.wantApology ? ". I also demand an apology from your company for the mistake." : "";
 
     // creating the letter
     var text="Date: "+ data.date +
@@ -41,7 +38,7 @@ module.exports = {
             "\n\n(1) Description of facts: "+ data.description +
             "\n\n(2) Grounds for Claim: "+ data.grounds +
             "\n\n(3) Transaction Date: "+ data.transactionDate +
-            "\n\n(4) Claimed Amount: "+ data.claimAmount + "HKD (full amount)"+
+            "\n\n(4) Claimed Amount: "+ data.claimAmount + "HKD (full amount)"+ data.apologyText +
             "\n\n(5) Location of Claimant: The claimant was located in "+ data.customerLocation +" when the claimant received the "+ data.itemType +
             "\n\n(6) Location of Company: These "+ data.itemType +" were acquired from a branch registered in "+ data.companyLocation +
             "\n\n-----------------------" +
