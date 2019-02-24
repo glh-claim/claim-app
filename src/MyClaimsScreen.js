@@ -24,7 +24,7 @@ export default class MyClaimsScreen extends Component
 		super();
 		this.state = {
 			data: [
-				{name: "Cathay Pacific", status: "In Progress", nature: "Overbooking", date: "23/02/2019", image: require("./images/cathay.png"), public: false},
+				{name: "Peach Airlines", status: "In Progress", nature: "Overbooking", date: "23/02/2019", image: require("./images/peach.png"), public: false},
 				{name: "Apple Inc.", status: "Settled (within 2 weeks)", nature: "Overcharged", date: "18/02/2019", image: require("./images/apple.png"), public: false},
 				{name: "Samsung Inc.", status: "In Progress (exceeded 2 weeks)", nature: "Overbooking", date: "02/02/2019", image: require("./images/samsung.jpg"), public: true},
 			]

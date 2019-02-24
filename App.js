@@ -22,6 +22,8 @@ import ReviewScreen from './src/ReviewScreen.js';
 import SectionScreen from './src/SectionScreen.js';
 import MyClaimsScreen from './src/MyClaimsScreen.js';
 import ConfirmationScreen from './src/ConfirmationScreen.js';
+import ImageScreen from './src/ImageScreen.js';
+import ImageScreen2 from './src/ImageScreen2.js';
 
 global.globalTitle = "";
 global.globalIcon = "";
@@ -30,7 +32,7 @@ global.globalResponseRate = 0;
 global.globalSettledCases = 0;
 global.globalCases = 0;
 global.globalResponseTime = 0;
-global.globalData = ["","","","","","goods","","","","","","",""];
+global.globalData = ["","","","","","","","","","","","",""];
 
 const RootStack = createStackNavigator({
     login: {
@@ -69,6 +71,12 @@ const RootStack = createStackNavigator({
 	confirmation: {
       screen: ConfirmationScreen
   	},
+	image: {
+      screen: ImageScreen
+  	},
+	image2: {
+      screen: ImageScreen2
+  },
   });
 
 const App = createAppContainer(RootStack);

@@ -1,4 +1,4 @@
-package com.claimmate;
+package com.claimate;
 
 import android.app.Application;
 

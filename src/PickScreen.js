@@ -4,7 +4,8 @@ import {
 	View, Text, Image,
     TouchableOpacity,
     Alert,
-	SafeAreaView
+	SafeAreaView,
+	ScrollView
 } from 'react-native';
 import { Icon } from "native-base";
 import { StackActions, NavigationActions } from 'react-navigation';
@@ -25,6 +26,23 @@ export default class PickScreen extends Component
 	{
 		return(
 			<SafeAreaView style = {styles.container}>
+				{1==0?
+
+				<View style = {{backgroundColor: 'white', borderRadius: 20, height: 120, margin: 20, marginBottom: -50, padding: 10}}>
+					<ScrollView>
+					<Text style = {{color: '#00355f', marginTop: 5, fontFamily: 'Avenir Next', fontSize: 16}}>
+						Pineapple Airlines{"\n"}
+						Date: 20/2/2019{"\n"}
+						Message: We apologize for your inconvenience and would like to settle your claim with a full refund.{"\n"}
+						Transaction number: 050-23-234234{"\n"}{"\n"}
+
+						The company indicates that the claim has been settled. Please click “Yes” to confirm settlement should you have received your compensation/apologies.
+					</Text>
+					</ScrollView>
+				</View>
+
+				:null}
+
 				<View style = {{flex: 1, flexDirection: 'row', paddingTop: 100}}>
 					<View style = {styles.half}>
 						<TouchableOpacity style = {styles.halfButton} onPress={() => this.props.navigation.navigate("browse")}>

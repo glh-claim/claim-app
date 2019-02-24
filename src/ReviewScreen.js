@@ -57,12 +57,12 @@ export default class ReviewScreen extends Component
 					<View style = {{marginTop: 10}}>
 						<Text style = {styles.reviewTextBold}>Evidence attached:</Text>
 						<View style = {{flexDirection: 'row'}}>
-							<View style = {{width: 110, height: 30, backgroundColor: '#00355f', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}}>
-								<Text style = {{color: 'white', fontFamily: 'Avenir Next'}}>ticket</Text>
-							</View>
-							<View style = {{width: 110, height: 30, backgroundColor: '#00355f', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}}>
+							<TouchableOpacity activeOpacity={0.5} style = {{width: 110, height: 30, backgroundColor: '#00355f', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}} onPress={() => this.props.navigation.navigate("image")}>
+								<Text style = {{color: 'white', fontFamily: 'Avenir Next'}}>confirmation</Text>
+							</TouchableOpacity>
+							<TouchableOpacity activeOpacity={0.5} style = {{width: 110, height: 30, backgroundColor: '#00355f', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}}>
 								<Text style = {{color: 'white', fontFamily: 'Avenir Next'}}>identification</Text>
-							</View>
+							</TouchableOpacity>
 						</View>
 					</View>
 					<View style = {{marginTop: 15}}>
@@ -88,10 +88,10 @@ export default class ReviewScreen extends Component
 					<View style = {{marginTop: 25}}>
 						<Text style = {[styles.reviewTextBold, {textAlign: 'center', fontSize: 16}]}>Do you find this complaint authentic and reasonable?</Text>
 						<View style = {{flexDirection: 'row', marginTop: 10}}>
-							<TouchableOpacity style = {{height: 50, backgroundColor: '#00355f', marginBottom: 15, borderRadius: 100, justifyContent: 'center', alignItems: 'center', flex: 1, marginRight: 5}} activeOpacity={0.5} onPress={() => Alert.alert("Wohooo")}>
+							<TouchableOpacity style = {{height: 50, backgroundColor: '#00355f', marginBottom: 15, borderRadius: 100, justifyContent: 'center', alignItems: 'center', flex: 1, marginRight: 5}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("pick")}>
 								<Text style = {{fontFamily: 'Avenir Next', color: 'white', textAlign: 'center', fontSize: 18, fontWeight: '500'}}>YES</Text>
 							</TouchableOpacity>
-							<TouchableOpacity style = {{height: 50, backgroundColor: '#00355f', marginBottom: 15, borderRadius: 100, justifyContent: 'center', alignItems: 'center', flex: 1, marginLeft: 5}} activeOpacity={0.5} onPress={() => Alert.alert("Booo")}>
+							<TouchableOpacity style = {{height: 50, backgroundColor: '#00355f', marginBottom: 15, borderRadius: 100, justifyContent: 'center', alignItems: 'center', flex: 1, marginLeft: 5}} activeOpacity={0.5} onPress={() => this.props.navigation.navigate("pick")}>
 								<Text style = {{fontFamily: 'Avenir Next', color: 'white', textAlign: 'center', fontSize: 18, fontWeight: '500'}}>NO</Text>
 							</TouchableOpacity>
 						</View>
@@ -118,7 +118,6 @@ export default class ReviewScreen extends Component
 			<SafeAreaView style = {styles.container}>
 				{this.renderHeader()}
 				{this.renderClaims()}
-				{this.renderButtons()}
 			</SafeAreaView>
 		);
 	}
