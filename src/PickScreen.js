@@ -25,29 +25,41 @@ export default class PickScreen extends Component
 	{
 		return(
 			<SafeAreaView style = {styles.container}>
-				<View style = {styles.half}>
-					<TouchableOpacity style = {styles.halfButton} onPress={() => this.props.navigation.navigate("browse")}>
-						<View style = {{height: 125, width: 125, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: 100}}>
-							<Icon name="magnifying-glass" type="Entypo" style={{ fontSize: 90, color: "#00355f" }} />
-						</View>
-						<Text style = {{color: '#00355f', marginTop: 5, fontFamily: 'Avenir Next', fontSize: 16}}>Browse</Text>
-					</TouchableOpacity>
+				<View style = {{flex: 1, flexDirection: 'row', paddingTop: 100}}>
+					<View style = {styles.half}>
+						<TouchableOpacity style = {styles.halfButton} onPress={() => this.props.navigation.navigate("browse")}>
+							<View style = {{height: 125, width: 125, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: 100}}>
+								<Icon name="magnifying-glass" type="Entypo" style={{ fontSize: 90, color: "#00355f" }} />
+							</View>
+							<Text style = {{color: '#00355f', marginTop: 5, fontFamily: 'Avenir Next', fontSize: 16}}>Browse</Text>
+						</TouchableOpacity>
+					</View>
+					<View style = {styles.half}>
+						<TouchableOpacity style = {styles.halfButton} onPress={() => this.props.navigation.navigate("claim")}>
+							<View style = {{height: 125, width: 125, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: 100}}>
+								<Icon name="exclamation" type="FontAwesome" style={{ fontSize: 90, color: "#00355f" }} />
+							</View>
+							<Text style = {{color: '#00355f', marginTop: 5, fontFamily: 'Avenir Next', fontSize: 16}}>Make a Claim</Text>
+						</TouchableOpacity>
+					</View>
 				</View>
-				<View style = {styles.half}>
-					<TouchableOpacity style = {styles.halfButton} onPress={() => this.props.navigation.navigate("claim")}>
-						<View style = {{height: 125, width: 125, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: 100}}>
-							<Icon name="exclamation" type="FontAwesome" style={{ fontSize: 90, color: "#00355f" }} />
-						</View>
-						<Text style = {{color: '#00355f', marginTop: 5, fontFamily: 'Avenir Next', fontSize: 16}}>Make a Claim</Text>
-					</TouchableOpacity>
-				</View>
-				<View style = {styles.half}>
-					<TouchableOpacity style = {styles.halfButton} onPress={() => this.props.navigation.navigate("review")}>
-						<View style = {{height: 125, width: 125, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: 100}}>
-							<Icon name="rate-review" type="MaterialIcons" style={{ fontSize: 75, color: "#00355f" }} />
-						</View>
-						<Text style = {{color: '#00355f', marginTop: 5, fontFamily: 'Avenir Next', fontSize: 16}}>Review</Text>
-					</TouchableOpacity>
+				<View style = {{flex: 1, flexDirection: 'row', paddingBottom: 100}}>
+					<View style = {styles.half}>
+						<TouchableOpacity style = {styles.halfButton} onPress={() => this.props.navigation.navigate("review")}>
+							<View style = {{height: 125, width: 125, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: 100}}>
+								<Icon name="rate-review" type="MaterialIcons" style={{ fontSize: 75, color: "#00355f" }} />
+							</View>
+							<Text style = {{color: '#00355f', marginTop: 5, fontFamily: 'Avenir Next', fontSize: 16}}>Review</Text>
+						</TouchableOpacity>
+					</View>
+					<View style = {styles.half}>
+						<TouchableOpacity style = {styles.halfButton} onPress={() => this.props.navigation.navigate("myclaims")}>
+							<View style = {{height: 125, width: 125, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: 100}}>
+								<Icon name="history" type="FontAwesome" style={{ fontSize: 75, color: "#00355f" }} />
+							</View>
+							<Text style = {{color: '#00355f', marginTop: 5, fontFamily: 'Avenir Next', fontSize: 16}}>My Claims</Text>
+						</TouchableOpacity>
+					</View>
 				</View>
 			</SafeAreaView>
 		);

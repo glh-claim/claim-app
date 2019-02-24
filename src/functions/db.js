@@ -55,9 +55,11 @@ module.exports = {
     }
   ],
 
-  lawServices: [
+  laws: [
+    // services
     {
       displayName: "Booking confirmation did not match the order specification",
+      itemType: "services",
       groundsSelected: [
         "Booking confirmation did not match the order specification"
       ],
@@ -65,6 +67,7 @@ module.exports = {
     },
     {
       displayName: "Defective ticket / overbooking",
+      itemType: "services",
       groundsSelected: [
         "Defective ticket / overbooking"
       ],
@@ -72,6 +75,7 @@ module.exports = {
     },
     {
       displayName: "Payment: Charge more than the contract amount",
+      itemType: "services",
       groundsSelected: [
         "Payment: Charge more than the contract amount"
       ],
@@ -79,16 +83,17 @@ module.exports = {
     },
     {
       displayName: "Unreasonable return / maintenance policy",
+      itemType: "services",
       groundsSelected: [
         "Unreasonable return / maintenance policy"
       ],
       sectionExtract: "Under Section 5 and 6 of the Unconscionable Contracts Ordinance, the contract may become unenforceable if, as a result of conduct engaged in by the other party, the consumer was required to comply with conditions that were not reasonably necessary for the protection of the legitimate interests of the other party."
-    }
-  ],
+    },
 
-  lawGoods: [
+    // goods
     {
       displayName: "Faulty / Perished / Broken / Not working when delivered",
+      itemType: "goods",
       groundsSelected: [
         "Faulty / Defective / Broken products",
         "Perished upon delivery",
@@ -98,6 +103,7 @@ module.exports = {
     },
     {
       displayName: "Not of satisfactory quality",
+      itemType: "goods",
       groundsSelected: [
         "Not of satisfactory quality"
       ],
@@ -105,6 +111,7 @@ module.exports = {
     },
     {
       displayName: "No delivery at all",
+      itemType: "goods",
       groundsSelected: [
         "No delivery at all"
       ],
@@ -112,6 +119,7 @@ module.exports = {
     },
     {
       displayName: "Paid without getting confirmation / ticket",
+      itemType: "goods",
       groundsSelected: [
         "Paid without getting confirmation / ticket"
       ],
@@ -119,6 +127,7 @@ module.exports = {
     },
     {
       displayName: "Product does not match description",
+      itemType: "goods",
       groundsSelected: [
         "Product does not match description"
       ],
@@ -126,6 +135,7 @@ module.exports = {
     },
     {
       displayName: "Counterfeit products",
+      itemType: "goods",
       groundsSelected: [
         "Counterfeit products"
       ],
@@ -133,6 +143,7 @@ module.exports = {
     },
     {
       displayName: "Incorrect quantities",
+      itemType: "goods",
       groundsSelected: [
         "Incorrect quantities"
       ],
@@ -140,6 +151,7 @@ module.exports = {
     },
     {
       displayName: "Missing acessories",
+      itemType: "goods",
       groundsSelected: [
         "Missing acessories"
       ],

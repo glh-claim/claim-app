@@ -71,7 +71,7 @@ export default class SummaryScreen extends Component
 			email: globalData[2],
 			companyName: globalData[3],
 			category: globalData[4],
-			itemType: globalData[5],
+			wantApology: globalData[5],
 			description: globalData[6],
 			grounds: globalData[7],
 			transactionDate: globalData[8],

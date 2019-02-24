@@ -25,11 +25,8 @@ export default class ClaimScreen extends Component
 		this.state = {
 			data: globalData,
 			category: [],
-			type: [
-				{value: "Goods"},
-				{value: "Services"}
-			],
 			grounds: [],
+			apology: [{value: "Yes"}, {value: "No"}]
 		}
 	}
 
@@ -73,12 +70,12 @@ export default class ClaimScreen extends Component
 		}
 	}
 
-	goodChanged(text) {
-		globalData[5] = text;
-	}
-
 	groundsChanged(text) {
 		globalData[7] = text;
+	}
+
+	apologyChanged(text) {
+		text == "Yes" ? globalData[5] = true : globalData[5] = false;
 	}
 
 	renderForm() {
@@ -146,13 +143,6 @@ export default class ClaimScreen extends Component
 				<View style = {styles.dropdownView}>
 					<Dropdown
 					baseColor={"#00355f"}
-					label='Item Type'
-					data={this.state.type}
-					onChangeText={(text) => this.goodChanged(text)}/>
-				</View>
-				<View style = {styles.dropdownView}>
-					<Dropdown
-					baseColor={"#00355f"}
 					label='Grounds'
 					data={this.state.grounds}
 					onChangeText={(text) => this.groundsChanged(text)}/>
@@ -195,6 +185,13 @@ export default class ClaimScreen extends Component
 					blurOnSubmit={true}
 					placeholderTextColor='#7f8c8d'
 					/>
+				</View>
+				<View style = {styles.dropdownView}>
+					<Dropdown
+					baseColor={"#00355f"}
+					label='Would you like a written apology?'
+					data={this.state.apology}
+					onChangeText={(text) => this.apologyChanged(text)}/>
 				</View>
 				<View style = {styles.questionView}>
 					<Text style = {styles.questionText}>Customer Location</Text>

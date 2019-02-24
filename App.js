@@ -20,6 +20,7 @@ import EvidenceScreen from './src/EvidenceScreen.js';
 import SummaryScreen from './src/SummaryScreen.js';
 import ReviewScreen from './src/ReviewScreen.js';
 import SectionScreen from './src/SectionScreen.js';
+import MyClaimsScreen from './src/MyClaimsScreen.js';
 
 global.globalTitle = "";
 global.globalIcon = "";
@@ -28,7 +29,7 @@ global.globalResponseRate = 0;
 global.globalSettledCases = 0;
 global.globalCases = 0;
 global.globalResponseTime = 0;
-global.globalData = ["","","","","","","","","","","","",""];
+global.globalData = ["","","","","","goods","","","","","","",""];
 
 const RootStack = createStackNavigator({
     login: {
@@ -60,6 +61,9 @@ const RootStack = createStackNavigator({
   	},
 	section: {
       screen: SectionScreen
+  	},
+	myclaims: {
+      screen: MyClaimsScreen
   	},
   });
 
