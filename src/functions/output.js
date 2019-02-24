@@ -22,10 +22,10 @@ module.exports = {
       }
     }
     var foundLaw = findSectionExtract(db.laws);
-    data.grounds = foundLaw.displayName;
-    data.itemType = foundLaw.itemType;
-    data.sectionExtract = foundLaw.sectionExtract;
-    
+    data.grounds = foundLaw && foundLaw.displayName ? foundLaw.displayName : "";
+    data.itemType = foundLaw && foundLaw.itemType ? foundLaw.itemType : "items";
+    data.sectionExtract = foundLaw && foundLaw.sectionExtract ? foundLaw.sectionExtract : "";
+
     // want apology
     data.apologyText = data.wantApology ? ". I also demand an apology from your company for the mistake." : "";
 
