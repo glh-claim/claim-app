@@ -31,7 +31,7 @@ global.globalResponseRate = 0;
 global.globalSettledCases = 0;
 global.globalCases = 0;
 global.globalResponseTime = 0;
-global.globalData = ["","","","","","goods","","","","","","",""];
+global.globalData = ["","","","","","","","","","","","",""];
 
 const RootStack = createStackNavigator({
     login: {
