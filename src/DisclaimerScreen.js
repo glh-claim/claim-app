@@ -24,7 +24,7 @@ export default class DisclaimerScreen extends Component
 	{
 		super();
 		this.state = {
-			checked: [false, false, false],
+			checked: [false, false, false]
 		};
 
 	}
@@ -91,23 +91,6 @@ export default class DisclaimerScreen extends Component
 	{
 		return(
 			<SafeAreaView style = {styles.container}>
-				// <View style = {{marginLeft: 20, marginBottom: -15, marginTop: 10}}>
-				// 	<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', fontSize: 14, fontWeight: '500'}}>Your Letter of Demand:</Text>
-				// </View>
-				// <ScrollView style ={{margin: 20, flex: 1, backgroundColor: 'white', borderRadius: 10, padding: 10}}>
-				// 	<Text style = {{fontFamily: 'Avenir Next', fontSize: 12, paddingBottom: 15}}>{this.state.outputText}</Text>
-				// </ScrollView>
-				// <View style = {{marginBottom: 20, marginHorizontal: 20, marginTop: -10}}>
-				// 	<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', fontSize: 14, fontWeight: '500'}}>Your Attachments</Text>
-				// 	<View style = {{flexDirection: 'row'}}>
-				// 		<View style = {{width: 120, height: 22, backgroundColor: 'white', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}}>
-				// 			<Text style = {{color: '#00355f', fontFamily: 'Avenir Next'}}>ticket.pdf</Text>
-				// 		</View>
-				// 		<View style = {{width: 120, height: 22, backgroundColor: 'white', borderRadius: 100, marginTop: 5, marginRight: 10, justifyContent: 'center', alignItems: 'center'}}>
-				// 			<Text style = {{color: '#00355f', fontFamily: 'Avenir Next'}}>screenshot.jpg</Text>
-				// 		</View>
-				// 	</View>
-				// </View>
 				{this.renderDisclaimer()}
 				{this.renderButton()}
 			</SafeAreaView>
