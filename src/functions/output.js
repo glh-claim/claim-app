@@ -26,8 +26,8 @@ module.exports = {
     } else {
       var foundLaw = findSectionExtract(db.lawServices);
     }
-    data.grounds = foundLaw.displayName;
-    data.sectionExtract = foundLaw.sectionExtract;
+    data.grounds = foundLaw && foundLaw.displayName ? foundLaw.displayName : "";
+    data.sectionExtract = foundLaw && foundLaw.sectionExtract ? foundLaw.sectionExtract : "";
 
     // creating the letter
     var text="Date: "+ data.date +
@@ -52,7 +52,7 @@ module.exports = {
             "\n\nLEGAL AND REGULATORY NOTICE BY CLAIMMATE"+
             "\n\n(1) CLAIMate is a tech-driven platform promoting access to justice by assisting claimants in their recovery of meritorious petty claims and, in parallel, leverages fair reviews of online vendors and service providers." +
             "\n\n(2) This letter of demand is automatically generated on CLAIMate for "+ data.customerName +" of "+ data.customerLocation +" who acts in a personal capacity.  CLAIMate is not a law firm and does not provide legal advice." +
-            "\n\n(3) This email is sent through the CLAIMate server. By replying directly to this email, you agree and fully understand that your response may be published in part or in whole on our public platform www.claimate.com.hk.  If you desire to pursue private correspondence with "+ data.customerName +" you may do so through his/her email correspondence: "+ data.email +" or telephone: "+ data.phoneNumber +"." +
+            "\n\n(3) This email is sent through the CLAIMate server. By replying directly to this email, you agree and fully understand that your response may be published in part or in whole on our public platform www.claimate.com.hk.  If you desire to pursue private correspondence with "+ data.customerName +" you may do so through his/her email correspondence: "+ data.email +" or telephone: " + data.phoneNumber + "." +
             "\n\n(4) Please be aware that upon the expiry of a TWO-week period from the date of submission of this letter of demand, the users of our platform, in this case, "+ data.customerName +" have the option to publish this demand letter and its contents in any form.";
     return text;
   }

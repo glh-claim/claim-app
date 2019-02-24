@@ -50,19 +50,34 @@ export default class SummaryScreen extends Component
 	}
 
 	componentDidMount() {
+		// var data = {
+		// 	customerName: globalData[0],
+		// 	phoneNumber: "+852 99999999",
+		// 	email: "email@gmail.com",
+		// 	companyName: "Bad Company",
+		// 	category: "Airlines",
+		// 	itemType: "services",
+		// 	description: "They are just so stupid.",
+		// 	grounds: "Defective ticket / overbooking",
+		// 	transactionDate: "24 Feb 2019",
+		// 	claimAmount: 3200,
+		// 	customerLocation: "Hong Kong",
+		// 	companyLocation: "Hong Kong"
+		// }
+
 		var data = {
-			customerName: "Sean Chok",
-			phoneNumber: "+852 99999999",
-			email: "email@gmail.com",
-			companyName: "Bad Company",
-			category: "Airlines",
-			itemType: "services",
-			description: "They are just so stupid.",
-			grounds: "Defective ticket / overbooking",
-			transactionDate: "24 Feb 2019",
-			claimAmount: 3200,
-			customerLocation: "Hong Kong",
-			companyLocation: "Hong Kong"
+			customerName: globalData[0],
+			phoneNumber: globalData[1],
+			email: globalData[2],
+			companyName: globalData[3],
+			category: globalData[4],
+			itemType: globalData[5],
+			description: globalData[6],
+			grounds: globalData[7],
+			transactionDate: globalData[8],
+			claimAmount: globalData[9],
+			customerLocation: globalData[10],
+			companyLocation: globalData[11]
 		}
 
 		var text = output.createDemandLetter(data);
