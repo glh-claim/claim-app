@@ -40,10 +40,11 @@ export default class ClaimScreen extends Component
 
 	goToEvidence() {
 		for (var i = 0; i < 12; i++) {
-			if (this.state.data[i].length < 2) {
-				Alert.alert("Please fill in all the responses first!");
-				return;
-			}
+			//TODO: UNCOMMENT
+			// if (this.state.data[i].length < 1) {
+			// 	Alert.alert("Please fill in all the responses first!");
+			// 	return;
+			// }
 		}
 
 		globalData = this.state.data;
@@ -227,10 +228,10 @@ export default class ClaimScreen extends Component
 	renderButton() {
 		return(
 			<View style = {{justifyContent: 'flex-end'}}>
-				<TouchableOpacity style = {{height: 50, backgroundColor: 'white', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.goToEvidence()}>
+				<TouchableOpacity style = {{height: 40, backgroundColor: 'white', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.goToEvidence()}>
 					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', textAlign: 'center', fontSize: 16}}>Continue</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style = {{height: 50, backgroundColor: 'white', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.goBack()}>
+				<TouchableOpacity style = {{height: 40, backgroundColor: 'white', marginBottom: 15, marginHorizontal: 100, borderRadius: 100, justifyContent: 'center', alignItems: 'center'}} activeOpacity={0.5} onPress={() => this.props.navigation.goBack()}>
 					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', textAlign: 'center', fontSize: 16}}>Go Back</Text>
 				</TouchableOpacity>
 			</View>

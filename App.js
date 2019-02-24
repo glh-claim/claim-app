@@ -21,6 +21,7 @@ import SummaryScreen from './src/SummaryScreen.js';
 import ReviewScreen from './src/ReviewScreen.js';
 import SectionScreen from './src/SectionScreen.js';
 import MyClaimsScreen from './src/MyClaimsScreen.js';
+import ConfirmationScreen from './src/ConfirmationScreen.js';
 
 global.globalTitle = "";
 global.globalIcon = "";
@@ -64,6 +65,9 @@ const RootStack = createStackNavigator({
   	},
 	myclaims: {
       screen: MyClaimsScreen
+  	},
+	confirmation: {
+      screen: ConfirmationScreen
   	},
   });
 
