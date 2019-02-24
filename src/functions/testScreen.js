@@ -1,6 +1,6 @@
 var output = require('./output.js');
 
-data = {
+var data = {
   customerName: "We the Team", // text
   phoneNumber: "+852 99999999", // text
   email: "email@gmail.com", // text
