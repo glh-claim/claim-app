@@ -1,21 +1,17 @@
 module.exports = {
   categories: [{
     displayName: "Airlines",
-      services: [
+      grounds: [
         "Booking confirmation did not match the order specification",
         "Defective ticket / overbooking",
-        "Payment: Charge more than the contract amount"
-      ],
-      goods: [
+        "Payment: Charge more than the contract amount",
         "Paid without getting confirmation / ticket"
       ]
     },
     {
       displayName: "Electronic and Appliances",
-      services: [
-        "Unreasonable return / maintenance policy"
-      ],
-      goods: [
+      grounds: [
+        "Unreasonable return / maintenance policy",
         "Faulty / Defective / Broken products",
         "Counterfeit Products",
         "Not of satisfactory quality",
@@ -27,7 +23,7 @@ module.exports = {
     },
     {
       displayName: "Food and Beverages",
-      goods: [
+      grounds: [
         "Perished upon delivery",
         "Passed the expiry date upon delivery",
         "Incorrect quantities",
@@ -37,8 +33,8 @@ module.exports = {
     },
     {
       displayName: "Apparels",
-      services: "Unreasonable return / maintenance policy",
-      goods: [
+      grounds: [
+        "Unreasonable return / maintenance policy"
         "Faulty / Defective / Broken products",
         "Not of satisfactory quality",
         "Incorrect quantities",
@@ -48,7 +44,7 @@ module.exports = {
     },
     {
       displayName: "Cosmetics",
-      goods: [
+      grounds: [
         "Faulty / Defective / Broken products",
         "Perished upon delivery",
         "Passed the expiry date upon delivery",

@@ -1,18 +1,19 @@
 var output = require('./output.js');
 
 data = {
-  customerName: "Sean Chok",
-  phoneNumber: "+852 99999999",
-  email: "email@gmail.com",
-  companyName: "Bad Company",
-  category: "Electronic and Appliances",
-  itemType: "goods",
-  description: "Looks so ugly compared to the photo",
-  grounds: "Not of satisfactory quality",
-  transactionDate: "24 Feb 2019",
-  claimAmount: 3200,
-  customerLocation: "Hong Kong",
-  companyLocation: "Hong Kong"
+  customerName: "Sean Chok", // text
+  phoneNumber: "+852 99999999", // text
+  email: "email@gmail.com", // text
+  companyName: "Bad Company", // text
+  category: "Electronic and Appliances", // dropdown - db.categories
+  itemType: "goods", // drop down services
+  description: "Looks so ugly compared to the photo", // text
+  grounds: "Not of satisfactory quality", // dropdown
+  transactionDate: "24 Feb 2019", // text
+  claimAmount: 3200, // number
+  wantApology: true,
+  customerLocation: "Hong Kong", // text
+  companyLocation: "Hong Kong" // text
 }
 
 var text = output.createDemandLetter(data);

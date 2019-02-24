@@ -29,6 +29,9 @@ module.exports = {
     data.grounds = foundLaw.displayName;
     data.sectionExtract = foundLaw.sectionExtract;
 
+    // want apology
+    var apologyText = ""
+
     // creating the letter
     var text="Date: "+ data.date +
             "\n\nRe: "+ data.customerName +"’s claim against you on CLAIMate" +
