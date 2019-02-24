@@ -38,7 +38,7 @@ module.exports = {
             "\n\n(1)Description of facts: "+ data.description +
             "\n(2)Grounds for Claim: "+ data.grounds +
             "\n(3)Transaction Date: "+ data.transactionDate +
-            "\n(4)Claimed Amount: "+ data.claimAmount + " (full amount)"+
+            "\n(4)Claimed Amount: "+ data.claimAmount + "HKD (full amount)"+
             "\n(5)Location of Claimant: The claimant was located in "+ data.customerLocation +" when the claimant received the "+ data.itemType +
             "\n(6)Location of Company: These "+ data.itemType +" were acquired from a branch registered in "+ data.companyLocation +
             "\n-----------------------" +
@@ -48,7 +48,7 @@ module.exports = {
             "\n\nThank you for your time and cooperation, I look forward to your response." +
             "\n\nYours sincerely," +
             "\n"+ data.customerName +
-            "\n(electronic signature is acceptable and will be treated as wet signature)"
+            "\n(electronic signature is acceptable and will be treated as wet signature)" + 
             "\n\nLEGAL AND REGULATORY NOTICE BY CLAIMMATE"+
             "\n\n(1)CLAIMate is a tech-driven platform promoting access to justice by assisting claimants in their recovery of meritorious petty claims and, in parallel, leverages fair reviews of online vendors and service providers." +
             "\n\n(2)This letter of demand is automatically generated on CLAIMate for "+ data.customerName +" of "+ data.customerLocation +" who acts in a personal capacity.  CLAIMate is not a law firm and does not provide legal advice." +
