@@ -13,6 +13,8 @@ import { Dropdown } from 'react-native-material-dropdown';
 var dummyText =
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget velit aliquet sagittis. Non blandit massa enim nec dui. Turpis egestas pretium aenean pharetra magna ac placerat. Accumsan lacus vel facilisis volutpat est velit egestas dui id. Lorem mollis aliquam ut porttitor leo a. Pharetra et ultrices neque ornare aenean euismod elementum nisi. Auctor urna nunc id cursus metus. Tellus in metus vulputate eu scelerisque felis imperdiet. Neque viverra justo nec ultrices. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Elementum eu facilisis sed odio morbi quis commodo odio aenean. Quam elementum pulvinar etiam non quam. Scelerisque felis imperdiet proin fermentum. Facilisis mauris sit amet massa vitae tortor. Felis donec et odio pellentesque diam volutpat commodo sed egestas."
 
+var output = require('./functions/output.js');
+
 export default class SummaryScreen extends Component
 {
 	static navigationOptions = {
@@ -28,8 +30,10 @@ export default class SummaryScreen extends Component
 				{ value: 'Receipt' },
 				{ value: 'Ticket' },
 				{ value: 'Identification' }
-			]
+			],
+			outputText: dummyText,
 		};
+
 	}
 
 	renderButton() {
@@ -45,6 +49,26 @@ export default class SummaryScreen extends Component
 		);
 	}
 
+	componentDidMount() {
+		var data = {
+			customerName: "Sean Chok",
+			phoneNumber: "+852 99999999",
+			email: "email@gmail.com",
+			companyName: "Bad Company",
+			category: "Airlines",
+			itemType: "services",
+			description: "They are just so stupid.",
+			grounds: "Defective ticket / overbooking",
+			transactionDate: "24 Feb 2019",
+			claimAmount: 3200,
+			customerLocation: "Hong Kong",
+			companyLocation: "Hong Kong"
+		}
+
+		var text = output.createDemandLetter(data);
+		this.setState({outputText: text});
+	}
+
 	render()
 	{
 		return(
@@ -52,8 +76,8 @@ export default class SummaryScreen extends Component
 				<View style = {{justifyContent: 'center', alignItems: 'center', marginTop: 25}}>
 					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', fontSize: 24, fontWeight: '500'}}>Your Claim Letter</Text>
 				</View>
-				<ScrollView style ={{margin: 20, flex: 1, backgroundColor: 'white', borderRadius: 10, padding: 10, marginTop: 10}}>
-					<Text style = {{fontFamily: 'Avenir Next', fontSize: 12}}>{dummyText}</Text>
+				<ScrollView style ={{margin: 20, flex: 1, backgroundColor: 'white', borderRadius: 10, padding: 10}}>
+					<Text style = {{fontFamily: 'Avenir Next', fontSize: 12, paddingBottom: 15}}>{this.state.outputText}</Text>
 				</ScrollView>
 				<View style = {{marginBottom: 20, marginHorizontal: 20,}}>
 					<Text style = {{fontFamily: 'Avenir Next', color: '#00355f', fontSize: 14, fontWeight: '500'}}>Your Attachments</Text>

@@ -28,6 +28,7 @@ export default class AirlineScreen extends Component
 	        data: [
 				{title: 'Cathay Pacific', image: require("./images/cathay.png"), numCases: 18, responseRate: 90, settledCasesRate: 55, responseTime: 5},
 				{title: 'HK Express', image: require("./images/hkexpress.jpg"), numCases: 93, responseRate: 13, settledCasesRate: 20, responseTime: 2},
+				{title: 'Peach Airlines',image: require("./images/peach.png"), numCases: 21, responseRate: 55, settledCasesRate: 62, responseTime: 3},
 				{title: 'China Airlines', image: require("./images/chinaairlines.jpg"), numCases: 11, responseRate: 26, settledCasesRate: 95, responseTime: 11},
 				{title: 'Ryanair', image: require("./images/ryanair.png"), numCases: 40, responseRate: 60, settledCasesRate: 91, responseTime: 9},
 				{title: 'Emirates',image: require("./images/emirates.png"), numCases: 15, responseRate: 75, settledCasesRate: 67, responseTime: 20},
@@ -57,6 +58,7 @@ export default class AirlineScreen extends Component
 				data: [
 					{title: 'HK Express', image: require("./images/hkexpress.jpg"), numCases: 93, responseRate: 13, settledCasesRate: 20, responseTime: 2},
 					{title: 'Ryanair', image: require("./images/ryanair.png"), numCases: 40, responseRate: 60, settledCasesRate: 91, responseTime: 9},
+					{title: 'Peach Airlines',image: require("./images/peach.png"), numCases: 21, responseRate: 55, settledCasesRate: 62, responseTime: 3},
 					{title: 'Cathay Pacific', image: require("./images/cathay.png"), numCases: 18, responseRate: 90, settledCasesRate: 55, responseTime: 5},
 					{title: 'Emirates',image: require("./images/emirates.png"), numCases: 15, responseRate: 75, settledCasesRate: 67, responseTime: 20},
 					{title: 'China Airlines', image: require("./images/chinaairlines.jpg"), numCases: 11, responseRate: 26, settledCasesRate: 95, responseTime: 11},
@@ -66,6 +68,7 @@ export default class AirlineScreen extends Component
 			this.setState({
 				data: [
 					{title: 'HK Express', image: require("./images/hkexpress.jpg"), numCases: 93, responseRate: 13, settledCasesRate: 20, responseTime: 2},
+					{title: 'Peach Airlines',image: require("./images/peach.png"), numCases: 21, responseRate: 55, settledCasesRate: 62, responseTime: 3},
 					{title: 'Cathay Pacific', image: require("./images/cathay.png"), numCases: 18, responseRate: 90, settledCasesRate: 55, responseTime: 5},
 					{title: 'Ryanair', image: require("./images/ryanair.png"), numCases: 40, responseRate: 60, settledCasesRate: 91, responseTime: 9},
 					{title: 'China Airlines', image: require("./images/chinaairlines.jpg"), numCases: 11, responseRate: 26, settledCasesRate: 95, responseTime: 11},
@@ -78,6 +81,7 @@ export default class AirlineScreen extends Component
 					{title: 'Cathay Pacific', image: require("./images/cathay.png"), numCases: 18, responseRate: 90, settledCasesRate: 55, responseTime: 5},
 					{title: 'Emirates',image: require("./images/emirates.png"), numCases: 15, responseRate: 75, settledCasesRate: 67, responseTime: 20},
 					{title: 'Ryanair', image: require("./images/ryanair.png"), numCases: 40, responseRate: 60, settledCasesRate: 91, responseTime: 9},
+					{title: 'Peach Airlines',image: require("./images/peach.png"), numCases: 21, responseRate: 55, settledCasesRate: 62, responseTime: 3},
 					{title: 'China Airlines', image: require("./images/chinaairlines.jpg"), numCases: 11, responseRate: 26, settledCasesRate: 95, responseTime: 11},
 					{title: 'HK Express', image: require("./images/hkexpress.jpg"), numCases: 93, responseRate: 13, settledCasesRate: 20, responseTime: 2},
 				],
@@ -87,6 +91,7 @@ export default class AirlineScreen extends Component
 				data: [
 					{title: 'China Airlines', image: require("./images/chinaairlines.jpg"), numCases: 11, responseRate: 26, settledCasesRate: 95, responseTime: 11},
 					{title: 'Ryanair', image: require("./images/ryanair.png"), numCases: 40, responseRate: 60, settledCasesRate: 91, responseTime: 9},
+					{title: 'Peach Airlines',image: require("./images/peach.png"), numCases: 21, responseRate: 55, settledCasesRate: 62, responseTime: 3},
 					{title: 'Emirates',image: require("./images/emirates.png"), numCases: 15, responseRate: 75, settledCasesRate: 67, responseTime: 20},
 					{title: 'Cathay Pacific', image: require("./images/cathay.png"), numCases: 18, responseRate: 90, settledCasesRate: 55, responseTime: 5},
 					{title: 'HK Express', image: require("./images/hkexpress.jpg"), numCases: 93, responseRate: 13, settledCasesRate: 20, responseTime: 2},
